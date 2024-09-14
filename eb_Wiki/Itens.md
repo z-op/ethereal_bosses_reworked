@@ -1,0 +1,23 @@
+### Itens
+---
+---
+
+- Eye 
+- Nectar
+- Rotten Wood
+- Nature Guardian Roots
+---
+- Miracle Healing
+---
+- Mushroom Pickaxe
+- Mushroom Shovel
+- Mushroom Axe
+- Mushroom Sword
+- Nature Whip
+- Nature Rod
+- Obsidian Sword
+- Flaming Sword 
+---
+- Frosty Queen Trophy
+- Crazy Mushrrom Trophy
+- Heated Trophy
