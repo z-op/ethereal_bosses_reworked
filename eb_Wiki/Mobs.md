@@ -1,30 +1,29 @@
-##Mobs
+## Mobs
 ---
 ---
 
-##Depths Eye 
+## Depths Eye 
 
  HP : 20
   
  Damge : 3
  
 
-##Ice Monster
+## Ice Monster
 
  HP : 80
   
  Damge : 15
  
  
-##Nature Guardian
+## Nature Guardian
 
  HP : 80
   
  Damge : 8
  
-
 ---
-##Fungs
+## Fungs
 
  HP : 80
   
@@ -33,7 +32,7 @@
  Follow : Rotten Wood
  
  
-##Pixies
+## Pixies
 
  HP : 80
   
@@ -43,21 +42,21 @@
  
  
 ---
-##Crazy Mushroom Boss 
+## Crazy Mushroom Boss 
 
  HP : 1100
   
  Damge : 18
 
 
-##Heated Boss
+## Heated Boss
 
  HP : 1300
   
  Damge : 20
 
 
-##Frosty Queen Boss
+## Frosty Queen Boss
 
  HP : 1500
   

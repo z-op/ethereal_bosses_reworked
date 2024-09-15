@@ -13,6 +13,7 @@ mobs:register_mob("ethereal_bosses:heated", {
 	hp_min = 1300,
 	hp_max = 1300,
 	armor = 80,
+	friendly_fire = true,
 	collisionbox = {-1.0, -0.5, -1.0, 1.0, 2.0, 1.0},
 	visual = "mesh",
 	visual_size = {x = 10, y = 10},

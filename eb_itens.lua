@@ -17,7 +17,13 @@ minetest.register_tool("ethereal_bosses:sword_obsidian", {
 		},
 		damage_groups = {fleshy = 9},
 	},
-	sound = {breaks = "default_tool_breaks"},
+	
+	sound = {
+	--breaks = "default_tool_breaks",
+	punch_use = "swoosh1",
+	punch_use_air ="swoosh1",
+	},
+	
 	groups = {sword = 1}
 })
 
@@ -39,9 +45,15 @@ minetest.register_tool("ethereal_bosses:flaming_sword", {
 				maxlevel = 3
 			},
 		},
-		damage_groups = {fleshy = 12 , fire=1},
+		damage_groups = {fleshy = 14 , fire=1},
 	},
-	sound = {breaks = "default_tool_breaks"},
+	
+	sound = {
+	--breaks = "default_tool_breaks",
+	punch_use = "swoosh1",
+	punch_use_air ="swoosh1",
+	},
+	
 	groups = {sword = 1},
 
 	
@@ -69,6 +81,18 @@ minetest.register_craftitem("ethereal_bosses:nectar", {
 })
 
 
+-- Queen's bottle :
+
+
+minetest.register_craftitem("ethereal_bosses:queen_bottle", {
+    description = "Queen's bottle",
+    inventory_image = "queen_bottle.png",
+ 	
+ 
+})
+
+
+
 -- ROTTEN WOOD :
 
 
@@ -78,7 +102,6 @@ minetest.register_craftitem("ethereal_bosses:rotten_wood", {
  	
  
 })
-
 
 
 -- NATURE DROPS : ===========================================================================
@@ -160,6 +183,7 @@ minetest.register_node("ethereal_bosses:heated_trophy", {
 -- CURA MILAGROSA :
 -- Sound : https://freesound.org/people/craigglenday/sounds/517173/ (CC0)
 
+
 minetest.register_craftitem("ethereal_bosses:miraclehealing", {
 	description = "Miracle Healing ",
 	inventory_image = "miraclehealing.png",
@@ -167,6 +191,9 @@ minetest.register_craftitem("ethereal_bosses:miraclehealing", {
 	groups = {vessel = 1},
 	-- função para recuperar vida simples
 	on_use = function(itemstack, user, pointed_thing,pos)
+	
+	
+	
 		local hp = user:get_hp() -- usuario consegue o valor atual de sua vida
 		if hp ~= 20 then -- comparando vida
 			user:set_hp(hp + 10)  -- atribuindo mais 10 de vida
@@ -200,7 +227,7 @@ minetest.register_craftitem("ethereal_bosses:miraclehealing", {
 			})
 		end
 
-		return  "vessels:glass_bottle"
+		return "ethereal_bosses:queen_bottle"
 	end
 })
 

@@ -7,17 +7,21 @@ mobs:register_mob("ethereal_bosses:frostyqueen", {
 	type = "monster",
 	passive = false,
 	attack_npcs = false,
-	attack_type = "shoot",
+	--attack_type = "shoot",
+	attack_type = "dogshoot",
+	dogshoot_switch = 1,
+	dogshoot_count_max = 2, 
+	dogshoot_count2_max = 2, 
 	shoot_interval = 15,
 	shoot_offset = 1.5,
 	arrow = "ethereal_bosses:spectrum_arrow",
 	pathfinding = true,
-	reach = 1,
-	damage = 5,
+	reach = 3,
+	damage = 8,
 	hp_min = 1500,
 	hp_max = 1500,
 	armor = 80,
-	collisionbox = {-0.4, -0.4, -0.4, 0.4, 2, 0.4},
+	collisionbox = {-0.4, -0.2, -0.4, 0.4, 1.5, 0.4},
 	visual = "mesh",
 	visual_size = {x = 9, y = 9},
 	mesh = "frostyqueen2.b3d",
@@ -35,12 +39,13 @@ mobs:register_mob("ethereal_bosses:frostyqueen", {
 
 --	fly = true,
 --	fly_in = "air",
-	walk_velocity = 1,
-	run_velocity = 5,
+	walk_velocity = 0,
+	run_velocity = 0,
 	jump_height = 1,
 	stepheight = 1.1,
 	floats = 0,
 	view_range = 35,
+	knock_back = false,
 	drops = {
 		--{name = "ethereal_bosses:crystal_gilly_staff", chance = 3, min = 1, max = 1},
 		--{name = "ethereal_bosses:crystal_ingot", chance = 1, min = 1, max = 2},
@@ -92,6 +97,9 @@ mobs:register_mob("ethereal_bosses:frostyqueen", {
 				glow = 8,
 			})
 		end
+		
+		
+    
 	end,
 
 	on_die = function(self, pos) -- POSIÇÃO

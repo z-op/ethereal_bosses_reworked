@@ -1,13 +1,21 @@
 -- CURA
 minetest.register_craft({
-	output = "ethereal_bosses:miraclehealing 1",
+	output = "ethereal_bosses:miraclehealing",
 	recipe = {
-		{"group:glass", "ethereal_bosses:nectar", "group:glass"},
-		{"group:glass", "ethereal_bosses:deye", "group:glass"},
-		{"group:glass", "group:glass", "group:glass"}
+		{"ethereal_bosses:nectar"},
+		{"ethereal_bosses:deye"},
+		{"ethereal_bosses:queen_bottle"}
 	}
 })
 
+
+minetest.register_craft({
+	output = "ethereal_bosses:queen_bottle 1",
+	recipe = {
+		{"group:glass"},
+		
+	}
+})
 
 -- TOOLS  : ===============================================================================
 

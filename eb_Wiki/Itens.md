@@ -6,6 +6,7 @@
 - Nectar
 - Rotten Wood
 - Nature Guardian Roots
+- Queen's bottle
 ---
 - Miracle Healing
 ---
