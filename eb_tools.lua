@@ -152,7 +152,7 @@ minetest.register_tool("ethereal_bosses:flaming_sword", {
 	inventory_image = "flaming_sword.png",
 	light =12 ,
 	
-	--[[
+
 	tool_capabilities = {
 		full_punch_interval = 0.7,
 		max_drop_level = 1,
@@ -166,7 +166,7 @@ minetest.register_tool("ethereal_bosses:flaming_sword", {
 		damage_groups = {fleshy = 14 , fire=1},
 	},
 	
-	]]
+	
 	
 	sound = {
 	--breaks = "default_tool_breaks",
@@ -176,56 +176,7 @@ minetest.register_tool("ethereal_bosses:flaming_sword", {
 	
 	groups = {sword = 1},
 	
-	   on_use = function(itemstack, user, pointed_thing)
-		
-		         local pos = user:get_pos()
-		
-			 if pointed_thing and pointed_thing.type == "object" then
-			 
-			  local pos = pointed_thing.ref:get_pos()
-			  -- minetest.chat_send_all("sim, objeto")
-			  
-			 	
-			 	
-		               pointed_thing.ref:punch(user, 1.0, {
-		               
-		               
-				    full_punch_interval = 1.0,
-				    damage_groups = {fleshy = 7},
-				    
-				})
-				
-				   minetest.add_particlespawner({
-					amount = 3,
-					time = 0.1,
-					minpos = pos,
-					maxpos = pos,
-					minvel = {x = -1, y = 5, z = -1},
-					maxvel = {x = 1, y = 1, z = 1},
-					minacc = {x = 0, y = 0, z = 0},
-					maxacc = {x = 0, y = 0, z = 0},
-					minexptime = 1,
-					maxexptime = 2,
-					minsize = 1,
-					maxsize = 2,
-					collisiondetection = true,
-					vertical = false,
-					texture = "eb_flames.png",
-					glow = 30 ,
-				        })
-				
-			local uses  = 65535 / 80 
-			itemstack:add_wear(uses) --falta ajustar, dura muito pouco
-		        return itemstack
-		        
-		     
-		        
-		     
-				    
-			   end
-			 
-		 
-		 end
+	  
 
 	
 

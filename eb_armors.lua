@@ -34,7 +34,7 @@ end
 
 	-- CRAFT :
 
-	minetest.register_craft({
+    minetest.register_craft({
     type = "shaped",
     output = "ethereal_bosses:helmet_roots",
     recipe = {
