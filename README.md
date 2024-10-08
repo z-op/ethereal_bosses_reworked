@@ -1,4 +1,4 @@
-### Forgotten Monsters (Reworked)
+### Ethereal Bosses (Reworked)
 ---
 
 ![EB](https://codeberg.org/pixelzone/ethereal_bosses_reworked/raw/branch/main/EtherealBosses.png)
@@ -14,7 +14,7 @@
 - VERSION : 0.1.1 Alpha
 - 
 - depends = Mobs
-- optional_depends = hunger_ng,3d_armor
+- optional_depends = hunger_ng,3d_armor,ethereal,mcl_core
 ---
 
 1 - [Getting Starded](https://codeberg.org/pixelzone/ethereal_bosses_reworked/src/branch/main/eb_Wiki/Getting_Starded.md)
@@ -29,3 +29,4 @@
 ---
 ---
 ### Have fun! ..
+

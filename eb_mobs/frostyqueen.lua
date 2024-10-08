@@ -69,7 +69,7 @@ mobs:register_mob("ethereal_bosses:frostyqueen", {
 	-- ESSA PARTE FOI RETIRADA DO MOD DE ENDERMAN DO MOBS MINECLONE :)
 	do_custom = function(self, dtime)
 
-		-- PARTICLE BEHAVIOUR HERE.
+		
 		local specpos = self.object:get_pos()
 		local chanceOfParticle = math.random(0, 1)
 		if chanceOfParticle == 1 then
@@ -123,21 +123,6 @@ mobs:register_arrow("ethereal_bosses:spectrum_arrow", {
 	glow = 5,
 	expire = 0.1,
 
---[[
-	hit_player = function(self, player)
-		player:punch(self.object, 1.0, {
-			full_punch_interval = 1.0,
-			damage_groups = {fleshy = 8},
-		}, nil)
-	end,
-
-	hit_mob = function(self, player)
-		player:punch(self.object,1.0, {
-			full_punch_interval = 1.0,
-			damage_groups = {fleshy = 8},
-		}, nil)
-	end,
-]]
 
 	hit_node = function(self, pos) -- self e pos
 		-- Ajuste de posição das caveiras apos ser adicinadas
