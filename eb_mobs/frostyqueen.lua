@@ -1,6 +1,10 @@
 -- SOUNDS :
 -- https://freesound.org/people/MadamVicious/sounds/218185/ (CC0)
 -- https://freesound.org/people/satchdev/sounds/325411/ (CC0)
+-- https://freesound.org/people/MadamVicious/sounds/347339/  (CC0)
+
+local last_part = 0
+
 
 mobs:register_mob("ethereal_bosses:frostyqueen", {
 	--nametag = "Frosty Queen Boss",
@@ -14,7 +18,7 @@ mobs:register_mob("ethereal_bosses:frostyqueen", {
 	dogshoot_count2_max = 2, 
 	shoot_interval = 15,
 	shoot_offset = 1.5,
-	arrow = "ethereal_bosses:spectrum_arrow",
+	arrow = "ethereal_bosses:snowflake",
 	pathfinding = true,
 	reach = 3,
 	damage = 8,
@@ -34,7 +38,10 @@ mobs:register_mob("ethereal_bosses:frostyqueen", {
 	makes_footstep_sound = true,
 	sounds = {
 		random = "girlsmile",
+		--damage = "golpeada",
+		attack = "attack_range_queen",
 		death = "gameover",
+		
 	},
 
 --	fly = true,
@@ -47,13 +54,13 @@ mobs:register_mob("ethereal_bosses:frostyqueen", {
 	view_range = 35,
 	knock_back = false,
 	drops = {
-		--{name = "ethereal_bosses:crystal_gilly_staff", chance = 3, min = 1, max = 1},
-		--{name = "ethereal_bosses:crystal_ingot", chance = 1, min = 1, max = 2},
+		
 		  {name = "ethereal_bosses:frostyqueen_trophy", chance = 1, min = 1, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 0,
 	light_damage = 0,
+	
 	animation = {
 		speed_run = 15,
 		stand_start = 1,
@@ -66,43 +73,49 @@ mobs:register_mob("ethereal_bosses:frostyqueen", {
 		shoot_end = 90,
 	},
 
-	-- ESSA PARTE FOI RETIRADA DO MOD DE ENDERMAN DO MOBS MINECLONE :)
+	
 	do_custom = function(self, dtime)
 
+    	         local current_time = minetest.get_us_time()
+		 if current_time - last_part >= 2 * (10^6)  then 
+		 last_part = current_time
 		
-		local specpos = self.object:get_pos()
-		local chanceOfParticle = math.random(0, 1)
-		if chanceOfParticle == 1 then
-			minetest.add_particle({
-				pos = {
-					x = specpos.x + math.random(-1, 1) * math.random() / 2,
-					y = specpos.y + math.random(0, 3),
-					z = specpos.z + math.random(-1, 1) * math.random() / 2
-				},
-				velocity = {
-					x = math.random(-.25, .25),
-					y = math.random(-.25, .25),
-					z = math.random(-.25, .25)
-				},
-				acceleration = {
-					x = math.random(-.5, .5),
-					y = math.random(-.5, .5),
-					z = math.random(-.5,.5)
-				},
-				expirationtime = 0.3,
-				size = math.random(2,5),
-				collisiondetection = true,
-				vertical = false,
-				texture = "fqp.png",
-				glow = 8,
-			})
+		 local pos = self.object:get_pos()
+		 	
+		 
+		 minetest.add_particlespawner({
+		    amount = 10, 
+		    time = 1, 
+		    
+		    minpos = {x = pos.x + 0.7 , y = pos.y, z = pos.z + 0.7},
+		    maxpos = {x = pos.x - 0.7, y = pos.y + 2, z = pos.z - 0.7},
+		    
+		    minvel = {x = 0, y = 1, z = 0}, 
+		    maxvel = {x = 0, y = 1, z = 0}, 
+		    
+		    minacc = {x = -1, y = -1, z = -1},
+		    maxacc = {x = 1, y = 1, z = 1}, 
+		    
+		    minexptime = 1, 
+		    maxexptime = 1,
+		     
+		    minsize = 2,
+		    maxsize = 3,
+		    
+		    collisiondetection = false,
+		    vertical = true, 
+		    texture = "fqp.png", 
+		    glow = 4, 
+		})
+		
 		end
 		
 		
     
 	end,
+	
 
-	on_die = function(self, pos) -- POSIÇÃO
+	on_die = function(self, pos) 
 		
 	end
 })
@@ -112,24 +125,45 @@ mobs:register_mob("ethereal_bosses:frostyqueen", {
 
 
 -- ARROW -----------------------------------------------------------
-mobs:register_arrow("ethereal_bosses:spectrum_arrow", {
+mobs:register_arrow("ethereal_bosses:snowflake", {
 	visual = "sprite",
-	visual_size = {x = 0.5, y = 0.5},
+	visual_size = {x = 1.5, y = 1.5},
+	collisionbox = {-0.5,-0.5,-0.5, 0.5,0.5,0.5},
 	velocity = 18,
 	textures = {"fqp.png"},
 	tail = 1,
 	tail_texture = "fqp.png",
 	tail_size = 10,
-	glow = 5,
-	expire = 0.1,
+	glow = 4,
+	expire = 0.25,
+  
+	on_step = function(self, dtime, moveresult)
+	
+		local current_velocity = self.object:get_velocity()
+		local pos = self.object:get_pos()
+		
+		self.object:set_velocity({
+			x = current_velocity.x,
+			y = current_velocity.y - 0.3,
+			z = current_velocity.z
+		})
+		
+		 local node = minetest.get_node_or_nil(pos)
+		 
+		 if node and node.name ~= "air" then
+		 pos.y = pos.y + 0.5
+		 minetest.add_entity(pos, "ethereal_bosses:icemonster")
+		 minetest.sound_play("attack_range_queen", {pos = pos, gain = 0.5})
+		 
+		 self.object:remove()
+		 
+		 end
+	end,
 
-
-	hit_node = function(self, pos) -- self e pos
-		-- Ajuste de posição das caveiras apos ser adicinadas
-		local pos = {x = pos.x, z = pos.z, y =pos.y + 2}
-		minetest.add_entity ( pos , "ethereal_bosses:icemonster")
-	end
 })
+
+
+
 
 
 mobs:register_egg("ethereal_bosses:frostyqueen", "frostyqueen", "eggsfrostyqueen.png", 1)
