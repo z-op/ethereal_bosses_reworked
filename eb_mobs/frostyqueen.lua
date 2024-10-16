@@ -33,7 +33,7 @@ mobs:register_mob("ethereal_bosses:frostyqueen", {
 	textures = {
 		{"frosty_queen_2.png"},
 	},
-	--glow = 8,
+	glow = 8,
 	blood_texture = "fqp.png",
 	makes_footstep_sound = true,
 	sounds = {
