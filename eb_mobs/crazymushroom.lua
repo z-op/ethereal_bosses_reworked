@@ -33,7 +33,8 @@ mobs:register_mob("ethereal_bosses:crazymushroom", {
 --		attack = "",
 --		death = "",
 	},
-
+    
+	pathfinding = 1,
 	walk_velocity = 2,
 	run_velocity = 4,
 	jump_height = 5,

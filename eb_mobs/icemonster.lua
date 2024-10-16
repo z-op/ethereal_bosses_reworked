@@ -26,12 +26,15 @@ mobs:register_mob("ethereal_bosses:icemonster", {
 		--attack = "",
 		--death = "",
 	},
+
+	pathfinding = 1,
 	walk_velocity = 1,
 	run_velocity = 5,
-	jump_height = 2,
+	jump_height = 4,
 	stepheight = 1.1,
 	floats = 0,
-	view_range = 45,
+	view_range = 35,
+
 	drops = {
 --		{name = "", chance = 2, min = 1, max = 1},
 --		{name = "", chance = 5, min = 1, max = 1},

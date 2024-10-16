@@ -32,6 +32,7 @@ mobs:register_mob("ethereal_bosses:heated", {
 	},
 	fly = true,
 	fly_in = "air",
+	pathfinding = 1,
 	walk_velocity = 2,
 	run_velocity = 4,
 	jump_height = 2,
@@ -69,4 +70,4 @@ mobs:register_mob("ethereal_bosses:heated", {
 
 
 mobs:register_egg("ethereal_bosses:heated", "heated", "eggsheated.png", 1)
---core.register_alias("heated:heated", "spawneggs:heated")
+

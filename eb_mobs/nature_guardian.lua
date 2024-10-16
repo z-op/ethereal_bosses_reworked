@@ -18,19 +18,22 @@ mobs:register_mob("ethereal_bosses:nature_guardian", {
 	textures = {
 		{"roots_monster.png"},
 	},
---	glow = 4,
-	--blood_texture = "",
+--	
+	blood_texture = "bloood_nature.png",
 	makes_footstep_sound = true,
 	sounds = {
 		--attack = "",
 		--death = "",
 	},
+
+	pathfinding = 1,
 	walk_velocity = 1,
 	run_velocity = 5,
 	jump_height = 2,
 	stepheight = 1.1,
 	floats = 0,
-	view_range = 45,
+	view_range = 25,
+
 	drops = {
 		{name = "natureguardian:natureroots", chance = 2, min = 1, max = 1},
 		--{name = "", chance = 5, min = 1, max = 1},

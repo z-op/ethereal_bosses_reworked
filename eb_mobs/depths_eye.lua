@@ -17,6 +17,7 @@ mobs:register_mob("ethereal_bosses:depthseye", {
 	textures = {
 		{"zoio_de_lula.png"},
 	},
+	
 	--blood_texture = "",
 	--glow = 8,
 	makes_footstep_sound = false,
@@ -26,6 +27,7 @@ mobs:register_mob("ethereal_bosses:depthseye", {
 	
 	fly = true , 
 	fly_in = "air",
+	pathfinding = 1,
 	walk_velocity = 1,
 	run_velocity = 4,
 	jump_height = 1,

@@ -27,6 +27,8 @@ mobs:register_mob("ethereal_bosses:fungs", {
 		--death = "",
 		random = "monster1",
 	},
+
+	pathfinding = 1,
 	walk_velocity = 5,
 	run_velocity = 7,
 	jump_height = 2,
