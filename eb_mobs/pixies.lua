@@ -1,5 +1,6 @@
 
 
+
 -- ============================================= PIXIES BLUE =============================================================
 mobs:register_mob("ethereal_bosses:pixies_blue", {
 	--nametag = "Pixies" ,

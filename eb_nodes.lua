@@ -1,4 +1,4 @@
-minetest.register_node("ethereal_bosses:ice_castle", {
+core.register_node("ethereal_bosses:ice_castle", {
 	description = "Ice Castle",
 	tiles = {"ice_castle.png"},
 	paramtype2 = "facedir",
@@ -16,7 +16,7 @@ minetest.register_node("ethereal_bosses:ice_castle", {
 })
 
 
-minetest.register_node("ethereal_bosses:ice_castle_blue", {
+core.register_node("ethereal_bosses:ice_castle_blue", {
 	description = "Ice Castle Blue",
 	tiles = {"ice_castle_blue.png"},
 	paramtype2 = "facedir",
@@ -34,7 +34,7 @@ minetest.register_node("ethereal_bosses:ice_castle_blue", {
 })
 
 
-minetest.register_node("ethereal_bosses:ice_castle_floor", {
+core.register_node("ethereal_bosses:ice_castle_floor", {
 	description = "Ice Castle Floor",
 	tiles = {"ice_castle_floor.png"},
 	paramtype2 = "facedir",
@@ -52,7 +52,7 @@ minetest.register_node("ethereal_bosses:ice_castle_floor", {
 })
 
 
-minetest.register_node("ethereal_bosses:ice_castle_floor", {
+core.register_node("ethereal_bosses:ice_castle_floor", {
 	description = "Ice Castle Floor Spaw Queen",
 	tiles = {"ice_castle_floor.png"},
 	paramtype2 = "facedir",

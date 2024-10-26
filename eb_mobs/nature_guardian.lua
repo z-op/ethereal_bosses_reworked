@@ -1,4 +1,8 @@
 
+
+local S = core.get_translator("ethereal_bosses")
+
+
 mobs:register_mob("ethereal_bosses:nature_guardian", {
 --	nametag = "Nature Guardian",
 	type = "monster",
@@ -60,5 +64,5 @@ mobs:register_mob("ethereal_bosses:nature_guardian", {
 
 
 
-mobs:register_egg("ethereal_bosses:nature_guardian", "Nature Guardian", "natureguardian_egg.png", 0)
+mobs:register_egg("ethereal_bosses:nature_guardian", S("Nature Guardian"), "natureguardian_egg.png", 0)
 

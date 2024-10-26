@@ -1,6 +1,10 @@
 -- SOUND :
 -- https://freesound.org/people/NicknameLarry/sounds/489901/ (CC0)
 
+local S = core.get_translator("ethereal_bosses")
+
+
+
 mobs:register_mob("ethereal_bosses:heated", {
 	--nametag = "Heated Boss",
 	type = "monster",
@@ -69,5 +73,8 @@ mobs:register_mob("ethereal_bosses:heated", {
 
 
 
-mobs:register_egg("ethereal_bosses:heated", "heated", "eggsheated.png", 1)
+mobs:register_egg("ethereal_bosses:heated", S("Heated"), "eggsheated.png", 1)
+
+
+
 

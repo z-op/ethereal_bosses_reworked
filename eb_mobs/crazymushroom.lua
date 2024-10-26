@@ -1,4 +1,6 @@
 
+local S = core.get_translator("ethereal_bosses")
+
 -- SOUND :
 -- https://freesound.org/people/Volvion/sounds/609780/ (CC0)
 -- https://freesound.org/people/newagesoup/sounds/348244/ (CC0)
@@ -76,5 +78,7 @@ mobs:register_mob("ethereal_bosses:crazymushroom", {
 
 
 
-mobs:register_egg("ethereal_bosses:crazymushroom", "crazymushroom",
-		"ethereal_bosses_inv_glove_glove.png", 1)
+mobs:register_egg("ethereal_bosses:crazymushroom",S("Crazy Mushroom"),"ethereal_bosses_inv_glove_glove.png", 1)
+
+
+

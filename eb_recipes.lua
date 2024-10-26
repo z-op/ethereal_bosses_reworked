@@ -1,5 +1,5 @@
 -- CURA
-minetest.register_craft({
+core.register_craft({
 	output = "ethereal_bosses:miraclehealing",
 	recipe = {
 		{"ethereal_bosses:nectar"},
@@ -9,7 +9,7 @@ minetest.register_craft({
 })
 
 
-minetest.register_craft({
+core.register_craft({
 	output = "ethereal_bosses:queen_bottle 1",
 	recipe = {
 		{"group:glass"},
@@ -19,7 +19,7 @@ minetest.register_craft({
 
 -- TOOLS  : ===============================================================================
 
-minetest.register_craft({
+core.register_craft({
     type = "shaped",
     output = "ethereal_bosses:pick_mushroom",
     recipe = {
@@ -30,7 +30,7 @@ minetest.register_craft({
 })
 
 
-minetest.register_craft({
+core.register_craft({
     type = "shaped",
     output = "ethereal_bosses:shovel_mushroom",
     recipe = {
@@ -41,7 +41,7 @@ minetest.register_craft({
 })
 
 
-minetest.register_craft({
+core.register_craft({
     type = "shaped",
     output = "ethereal_bosses:axe_mushroom",
     recipe = {
@@ -51,7 +51,7 @@ minetest.register_craft({
     }
 })
 
-minetest.register_craft({
+core.register_craft({
     type = "shaped",
     output = "ethereal_bosses:sword_mushroom",
     recipe = {
@@ -66,23 +66,23 @@ minetest.register_craft({
 --NATURE ITENS : ==========================================================================
 -- CRAFT :
 
-minetest.register_craft({
+core.register_craft({
     type = "shaped",
     output = "ethereal_bosses:naturewhip",
     recipe = {
-        {"","natureguardian:natureroots",""},
-        {"natureguardian:natureroots","default:stick",""},
+        {"","ethereal_bosses:natureroots",""},
+        {"ethereal_bosses:natureroots","group:stick",""},
         {"", "group:stick",""}
     }
 })
 
 
-minetest.register_craft({
+core.register_craft({
     type = "shaped",
     output = "ethereal_bosses:naturerod",
     recipe = {
         {"","group:stone",""},
-        {"","natureguardian:natureroots",""},
+        {"","ethereal_bosses:natureroots",""},
         {"", "group:stick",""}
     }
 })
@@ -90,7 +90,7 @@ minetest.register_craft({
 
 
 -- NOVOS ITENS : ==================================================================================
-minetest.register_craft({
+core.register_craft({
 	output = "ethereal_bosses:nectar 1",
 	recipe = {
 		
@@ -101,7 +101,7 @@ minetest.register_craft({
 
 
 
-minetest.register_craft({
+core.register_craft({
 	output = "ethereal_bosses:rotten_wood 1",
 	recipe = {
 		{"", "group:tree", "group:water_bucket"},

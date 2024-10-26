@@ -1,8 +1,9 @@
+local S = core.get_translator("ethereal_bosses")
 
 -- DEATHUS EYE : 
 
-minetest.register_craftitem("ethereal_bosses:deye", {
-    description = "Eye",
+core.register_craftitem("ethereal_bosses:deye", {
+    description = S("Eye"),
     inventory_image = "deye.png",
  	
  
@@ -12,8 +13,8 @@ minetest.register_craftitem("ethereal_bosses:deye", {
 --- NECTAR
 
 
-minetest.register_craftitem("ethereal_bosses:nectar", {
-    description = "Nectar",
+core.register_craftitem("ethereal_bosses:nectar", {
+    description = S("Nectar"),
     inventory_image = "nectar.png",
  	
  
@@ -23,8 +24,8 @@ minetest.register_craftitem("ethereal_bosses:nectar", {
 -- Queen's bottle :
 
 
-minetest.register_craftitem("ethereal_bosses:queen_bottle", {
-    description = "Queen's bottle",
+core.register_craftitem("ethereal_bosses:queen_bottle", {
+    description = S("Queen's bottle"),
     inventory_image = "queen_bottle.png",
  	
  
@@ -35,8 +36,8 @@ minetest.register_craftitem("ethereal_bosses:queen_bottle", {
 -- ROTTEN WOOD :
 
 
-minetest.register_craftitem("ethereal_bosses:rotten_wood", {
-    description = "Rotten Wood",
+core.register_craftitem("ethereal_bosses:rotten_wood", {
+    description = S("Rotten Wood"),
     inventory_image = "rotten_wood.png",
  	
  
@@ -45,8 +46,8 @@ minetest.register_craftitem("ethereal_bosses:rotten_wood", {
 
 -- NATURE DROPS : ===========================================================================
 
-minetest.register_craftitem("ethereal_bosses:natureroots", {
-    description = "Nature Guardian Roots",
+core.register_craftitem("ethereal_bosses:natureroots", {
+    description = S("Nature Guardian Roots"),
     inventory_image = "natureroots.png",
  
 	
@@ -56,8 +57,8 @@ minetest.register_craftitem("ethereal_bosses:natureroots", {
 
 -- TROFÉUS : =================================================================================
 
-minetest.register_node("ethereal_bosses:frostyqueen_trophy", {
-	description = "Frosty Queen Trophy",
+core.register_node("ethereal_bosses:frostyqueen_trophy", {
+	description = S("Frosty Queen Trophy"),
 	drawtype = "mesh",
 	mesh = "trofeus_ethreal.obj",
 	tiles = {"trufeus_frostyqueen.png"},
@@ -75,8 +76,8 @@ minetest.register_node("ethereal_bosses:frostyqueen_trophy", {
 	},
 })
 
-minetest.register_node("ethereal_bosses:crazymushrrom_trophy", {
-	description = "Crazy Mushrrom Trophy",
+core.register_node("ethereal_bosses:crazymushrrom_trophy", {
+	description = S("Crazy Mushrrom Trophy"),
 	drawtype = "mesh",
 	mesh = "trofeus_ethreal.obj",
 	tiles = {"trufeus_crazymushroom.png"},
@@ -94,8 +95,8 @@ minetest.register_node("ethereal_bosses:crazymushrrom_trophy", {
 	},
 })
 
-minetest.register_node("ethereal_bosses:heated_trophy", {
-	description = "Heated Trophy",
+core.register_node("ethereal_bosses:heated_trophy", {
+	description = S("Heated Trophy"),
 	drawtype = "mesh",
 	mesh = "trofeus_ethreal.obj",
 	tiles = {"trufeus_heated.png"},
@@ -123,8 +124,8 @@ minetest.register_node("ethereal_bosses:heated_trophy", {
 -- Sound : https://freesound.org/people/craigglenday/sounds/517173/ (CC0)
 
 
-minetest.register_craftitem("ethereal_bosses:miraclehealing", {
-	description = "Miracle Healing ",
+core.register_craftitem("ethereal_bosses:miraclehealing", {
+	description = S("Miracle Healing"),
 	inventory_image = "miraclehealing.png",
 	stack_max = 1,
 	groups = {vessel = 1},
@@ -138,7 +139,7 @@ minetest.register_craftitem("ethereal_bosses:miraclehealing", {
 			user:set_hp(hp + 10)  -- atribuindo mais 10 de vida
 		end
 
-		minetest.sound_play("bebendo", {
+		core.sound_play("bebendo", {
 			pos = pos,
 			gain = 1.0,
 			max_hear_distance = 5,
@@ -148,7 +149,7 @@ minetest.register_craftitem("ethereal_bosses:miraclehealing", {
 
 		for i = 1, 30 do
 
-			minetest.add_particle({
+			core.add_particle({
 				pos = pos,
 				acceleration = 0,
 				velocity = {
@@ -171,4 +172,12 @@ minetest.register_craftitem("ethereal_bosses:miraclehealing", {
 })
 
 
+
+
+
+core.register_craftitem("ethereal_bosses:natureroots", {
+    description = S("Nature Guardian Roots"),
+    inventory_image = "natureroots.png",
+ 	
+})
 

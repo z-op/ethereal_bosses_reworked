@@ -3,6 +3,9 @@
 -- https://freesound.org/people/satchdev/sounds/325411/ (CC0)
 -- https://freesound.org/people/MadamVicious/sounds/347339/  (CC0)
 
+local S = core.get_translator("ethereal_bosses")
+
+
 local last_part = 0
 
 
@@ -166,4 +169,7 @@ mobs:register_arrow("ethereal_bosses:snowflake", {
 
 
 
-mobs:register_egg("ethereal_bosses:frostyqueen", "frostyqueen", "eggsfrostyqueen.png", 1)
+mobs:register_egg("ethereal_bosses:frostyqueen", S("Frosty Queen"), "eggsfrostyqueen.png", 1)
+
+
+

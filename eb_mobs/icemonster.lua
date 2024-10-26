@@ -1,4 +1,6 @@
 
+local S = core.get_translator("ethereal_bosses")
+
 mobs:register_mob("ethereal_bosses:icemonster", {
 --	nametag = "Ice Monster",
 	type = "monster",
@@ -71,4 +73,7 @@ mobs:spawn({
 })
 ]]
 
-mobs:register_egg("ethereal_bosses:icemonster", "Ice Monster", "ice_castle_blue.png", 1)
+mobs:register_egg("ethereal_bosses:icemonster", S("Ice Monster"), "ice_castle_blue.png", 1)
+
+
+

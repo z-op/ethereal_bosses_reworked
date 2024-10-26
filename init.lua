@@ -1,4 +1,4 @@
-local path = minetest.get_modpath("ethereal_bosses")
+local path = core.get_modpath("ethereal_bosses")
 
 
 
@@ -25,7 +25,7 @@ dofile(path .. "/eb_recipes.lua")
 dofile(path .. "/eb_tools.lua")
 
 -- NODES : ===========================================
-dofile(path .. "/eb_nodes.lua")
+-- dofile(path .. "/eb_nodes.lua")
 -- SPAWN : ===========================================
 --dofile(path .. "/eb_spawn.lua")
 

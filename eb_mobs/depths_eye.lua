@@ -1,4 +1,6 @@
 
+local S = core.get_translator("ethereal_bosses")
+
 mobs:register_mob("ethereal_bosses:depthseye", {
 	--nametag = "Depths Eye " ,
 	type = "monster",
@@ -64,7 +66,7 @@ mobs:register_mob("ethereal_bosses:depthseye", {
 
 
 
-mobs:register_egg("ethereal_bosses:depthseye", "Depths Eye", "zoi_de_lula_egg.png", 0)
+mobs:register_egg("ethereal_bosses:depthseye", S("Depths Eye"), "zoi_de_lula_egg.png", 0)
 
 
 

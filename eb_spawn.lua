@@ -52,7 +52,7 @@ mobs:spawn({
 
 -- SPAWNS DEF : ========================================
 
-if minetest.get_modpath("ethereal") then
+if core.get_modpath("ethereal") then
 
 mobs:spawn({
 	name = "ethereal_bosses:crazymushroom",
@@ -132,7 +132,7 @@ end
 
 
 --- SUP MCL : ==============================================================
-if minetest.get_modpath("mcl_core") then
+if core.get_modpath("mcl_core") then
 
 mobs:spawn({
 	name = "ethereal_bosses:crazymushroom",

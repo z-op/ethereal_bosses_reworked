@@ -1,8 +1,9 @@
+local S = core.get_translator("ethereal_bosses")
 
 --=============================== MUSHROOM TOOLS : =============================================================================
 
-minetest.register_tool("ethereal_bosses:pick_mushroom", {
-	description = "Mushroom Pickaxe",
+core.register_tool("ethereal_bosses:pick_mushroom", {
+	description = S("Mushroom Pickaxe"),
 	inventory_image = "mushroom_pick.png",
 	tool_capabilities = {
 		full_punch_interval = 1.3,
@@ -18,8 +19,8 @@ minetest.register_tool("ethereal_bosses:pick_mushroom", {
 
 
 
-minetest.register_tool("ethereal_bosses:shovel_mushroom", {
-	description = "Mushroom Shovel",
+core.register_tool("ethereal_bosses:shovel_mushroom", {
+	description = S("Mushroom Shovel"),
 	inventory_image = "mushroom_shovel.png",
 	wield_image = "mushroom_shovel.png",
 	tool_capabilities = {
@@ -35,8 +36,8 @@ minetest.register_tool("ethereal_bosses:shovel_mushroom", {
 })
 
 
-minetest.register_tool("ethereal_bosses:axe_mushroom", {
-	description = "Mushroom Axe",
+core.register_tool("ethereal_bosses:axe_mushroom", {
+	description = S("Mushroom Axe"),
 	inventory_image = "mushroom_axe.png",
 	tool_capabilities = {
 		full_punch_interval = 1.2,
@@ -52,8 +53,8 @@ minetest.register_tool("ethereal_bosses:axe_mushroom", {
 
 
 
-minetest.register_tool("ethereal_bosses:sword_mushroom", {
-	description = "Mushroom Sword",
+core.register_tool("ethereal_bosses:sword_mushroom", {
+	description = S("Mushroom Sword"),
 	inventory_image = "mushroom_sword.png",
 	tool_capabilities = {
 		full_punch_interval = 1.2,
@@ -74,8 +75,8 @@ minetest.register_tool("ethereal_bosses:sword_mushroom", {
 --========================= NATURE TOOLS : ===========================================================================
 -- Sound whip : https://freesound.org/people/CGEffex/sounds/93100/
 
-minetest.register_tool("ethereal_bosses:naturewhip", {
-	description = "Nature Whip",
+core.register_tool("ethereal_bosses:naturewhip", {
+	description = S("Nature Whip"),
 	inventory_image = "Nature_Whip.png",
 	range = 15,
 	tool_capabilities = {
@@ -95,8 +96,8 @@ minetest.register_tool("ethereal_bosses:naturewhip", {
 
 
 
-minetest.register_tool("ethereal_bosses:naturerod", {
-	description = "Nature Rod",
+core.register_tool("ethereal_bosses:naturerod", {
+	description = S("Nature Rod"),
 	wield_scale = {x = 1.5, y = 3.1, z = 1.5},
 	inventory_image = "Nature_Rod.png",
 	range = 15,
@@ -117,9 +118,9 @@ minetest.register_tool("ethereal_bosses:naturerod", {
 
 -- Obsidian Sword (Agora item de troca com Elder)
 
-minetest.register_tool("ethereal_bosses:sword_obsidian", {
+core.register_tool("ethereal_bosses:sword_obsidian", {
 	wield_scale = {x = 1.5, y = 1.5, z = 2.5},
-	description = "Obsidian Sword",
+	description = S("Obsidian Sword"),
 	inventory_image = "obsidian_sword.png",
 	tool_capabilities = {
 		full_punch_interval = 0.7,
@@ -146,9 +147,9 @@ minetest.register_tool("ethereal_bosses:sword_obsidian", {
 
 -- ESPADA FLAMEJANTE :
 
-minetest.register_tool("ethereal_bosses:flaming_sword", {
+core.register_tool("ethereal_bosses:flaming_sword", {
 	wield_scale = {x = 1.5, y = 1.5, z = 2.5},
-	description = "Flaming Sword",
+	description = S("Flaming Sword"),
 	inventory_image = "flaming_sword.png",
 	light =12 ,
 	

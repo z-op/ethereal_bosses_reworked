@@ -1,5 +1,7 @@
 
 
+local S = core.get_translator("ethereal_bosses")
+
 mobs:register_mob("ethereal_bosses:fungs", {
 --	nametag = "Fungs",
 	type = "npc",
@@ -124,4 +126,7 @@ mobs:register_mob("ethereal_bosses:fungs", {
 
 
 
-mobs:register_egg("ethereal_bosses:fungs", "Fungs", "fungs_egg.png", 0)
+mobs:register_egg("ethereal_bosses:fungs", S("Fungs"), "fungs_egg.png", 0)
+
+
+
