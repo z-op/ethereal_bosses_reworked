@@ -1,4 +1,3 @@
-
 local S = core.get_translator("ethereal_bosses")
 
 mobs:register_mob("ethereal_bosses:depthseye", {
@@ -44,10 +43,7 @@ mobs:register_mob("ethereal_bosses:depthseye", {
 	water_damage = 0,
 	lava_damage = 0,
 	light_damage = 3,
-	
-	
 	animation = {
-	
 		speed_run = 15,
 		stand_start = 1,
 		stand_end =40,
@@ -59,18 +55,13 @@ mobs:register_mob("ethereal_bosses:depthseye", {
 		--punch_end = 0,
 	},
 	
-	
-	
+	after_activate = function(self, staticdata, def, dtime)
+	  if core.get_modpath("mcl_armor") then
+	   self.damage = 1
+         end
+	end,
+			
 })
 
-
-
-
 mobs:register_egg("ethereal_bosses:depthseye", S("Depths Eye"), "zoi_de_lula_egg.png", 0)
-
-
-
-
-
-
 

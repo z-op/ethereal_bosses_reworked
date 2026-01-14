@@ -1,28 +1,22 @@
-
-
 local S = core.get_translator("ethereal_bosses")
 
-
 mobs:register_mob("ethereal_bosses:nature_guardian", {
---	nametag = "Nature Guardian",
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
 	pathfinding = true,
 	reach = 4,
 	damage = 8,
-	hp_min = 80,
-	hp_max = 80,
+	hp_min = 50,
+	hp_max = 50,
 	armor = 80,
 	collisionbox = {-0.4, -0.5, -0.4, 0.4, 2.0, 0.4},
 	visual = "mesh",
 	mesh = "natureguardian.b3d",
 	visual_size = {x = 9, y = 9},
-	--rotate = 180,
 	textures = {
 		{"roots_monster.png"},
-	},
---	
+	},	
 	blood_texture = "bloood_nature.png",
 	makes_footstep_sound = true,
 	sounds = {
@@ -39,9 +33,7 @@ mobs:register_mob("ethereal_bosses:nature_guardian", {
 	view_range = 25,
 
 	drops = {
-		{name = "natureguardian:natureroots", chance = 2, min = 1, max = 1},
-		--{name = "", chance = 5, min = 1, max = 1},
---		{name = "", chance = 3, min = 1, max = 1},
+		{name = "ethereal_bosses:natureroots", chance = 2, min = 1, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 1,
@@ -58,11 +50,13 @@ mobs:register_mob("ethereal_bosses:nature_guardian", {
 		punch_start = 110,
 		punch_end = 15920,
 	},
+	
+	after_activate = function(self, staticdata, def, dtime)
+	  if core.get_modpath("mcl_armor") then
+	   self.damage = 1
+         end
+	end,
 })
-
-
-
-
 
 mobs:register_egg("ethereal_bosses:nature_guardian", S("Nature Guardian"), "natureguardian_egg.png", 0)
 

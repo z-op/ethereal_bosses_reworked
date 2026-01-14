@@ -1,5 +1,3 @@
-
-
 local S = core.get_translator("ethereal_bosses")
 
 local dialod_txt = S("Hello adventurer,")
@@ -11,10 +9,8 @@ local dialod_txt6 = S("Do you have 20 Eyes?,I will give you something in return.
   													
 local dialog_btn_elder = S("Yes, I have them")
 
---"Yes, I have them."
 local function elder_dialog(self,clicker)
-
-        
+    
          local formspec_dialog = {
             "size[10,4]".. 
             "image[0,0.6;2,2;elder_fotinha.png] "..
@@ -28,8 +24,6 @@ local function elder_dialog(self,clicker)
         return table.concat(formspec_dialog, "")
  
 end
-
-
 
 mobs:register_mob("ethereal_bosses:elder", {
 
@@ -48,25 +42,15 @@ mobs:register_mob("ethereal_bosses:elder", {
     --visual_size = {x=10, y=10},
     makes_footstep_sound = true,
    -- sounds = { },
-    
-    
-    on_rightclick = function(self, clicker)
-       
-    	
+   on_rightclick = function(self, clicker)
          local open =  elder_dialog()
          core.show_formspec(clicker:get_player_name(), "ethereal_bosses:elder_dialog", open)
-        
-        
-         
-        
     end,
    
 })
 
-
 core.register_on_player_receive_fields(function(player, formname, fields)
 
-   
     local eyes = player:get_inventory():contains_item("main", "ethereal_bosses:deye 20")
     
 	    if formname == "ethereal_bosses:elder_dialog" and fields.yes then
@@ -86,8 +70,5 @@ core.register_on_player_receive_fields(function(player, formname, fields)
       
 end)
 
-
-
 mobs:register_egg("ethereal_bosses:elder", "Elder", "elder_gui_bg.png", 1)
-
 

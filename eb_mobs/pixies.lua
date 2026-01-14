@@ -1,7 +1,4 @@
-
-
-
--- ============================================= PIXIES BLUE =============================================================
+---- VERSÃO ANTIGA SERÁ MANTIDA ATÉ A PROXIMA ATUALIZAÇÃO!ESSE MO É INUTIL
 mobs:register_mob("ethereal_bosses:pixies_blue", {
 	--nametag = "Pixies" ,
 	type = "npc",
@@ -18,14 +15,13 @@ mobs:register_mob("ethereal_bosses:pixies_blue", {
 	visual = "mesh",
 	visual_size = {x = 7, y = 7},
 	mesh = "pixies.b3d",
-	--rotate = 180,
 	textures = {
-		{"pixies.png"},
+	 {"pixies.png"},
+	 {"pixies_vermelho.png"},
+	 {"pixies_verde.png"},	
 	},
 
 	makes_footstep_sound = false,
-
-	--blood_texture = "",
 	sounds = {
 		random = "pixies",
 		--death = "",
@@ -39,21 +35,14 @@ mobs:register_mob("ethereal_bosses:pixies_blue", {
 	jump_height = 3,
 	stepheight = 1.1,
 	floats = 0,
-	view_range = 35,
-	
-	drops = {
-	
-		--{name = " ", chance = 3, min = 0, max = 1},
-		
-	},
-
+	view_range = 35,	
+	drops = {},
 	water_damage = 1,
 	lava_damage = 2,
 	light_damage = 0,
 	glow =8,
 	owner = "", --
 	order = "follow",
-
 	animation = {
 		speed_normal = 30,
 		stand_start = 1,
@@ -67,20 +56,14 @@ mobs:register_mob("ethereal_bosses:pixies_blue", {
 		
 	},
 	
-	follow = {
-		 "ethereal_bosses:nectar", 
-	
+	follow = {"ethereal_bosses:nectar", },
 		
-	},
-	
-	
 	on_rightclick = function(self, clicker)
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 50, 50, 90, false, nil) then return end
 
-		-- by right-clicking owner can switch between staying and walking
 		if self.owner and self.owner == clicker:get_player_name() then
 
 			if self.order ~= "stand" then
@@ -100,19 +83,10 @@ mobs:register_mob("ethereal_bosses:pixies_blue", {
 
 end
 
-
-
 })
-
-
-
-
-
 
 mobs:register_egg("ethereal_bosses:pixies_blue", "Pixies Blue", "pixies_blue_egg.png", 0)
 
--- ======================================================================================================================
--- ============================================= PIXIES RED =============================================================
 mobs:register_mob("ethereal_bosses:pixies_red", {
 	--nametag = "Pixies Red" ,
 	type = "npc",
@@ -129,13 +103,11 @@ mobs:register_mob("ethereal_bosses:pixies_red", {
 	visual = "mesh",
 	visual_size = {x = 7, y = 7},
 	mesh = "pixies.b3d",
-	--rotate = 180,
 	textures = {
 		{"pixies_vermelho.png"},
 	},
 
-	makes_footstep_sound = false,
-	
+	makes_footstep_sound = false,	
 	sounds = {
 		random = "pixies",
 		--death = "",
@@ -150,14 +122,9 @@ mobs:register_mob("ethereal_bosses:pixies_red", {
 	floats = 0,
 	view_range = 35,
 	glow =8,
-	owner = "", --
+	owner = "",
 	order = "follow",
-
-	drops = {
-	
-		--{name = " ", chance = 3, min = 0, max = 1},
-		
-	},
+	drops = {},
 	water_damage = 1,
 	lava_damage = 2,
 	light_damage = 0,
@@ -175,20 +142,14 @@ mobs:register_mob("ethereal_bosses:pixies_red", {
 		
 	},
 
-	follow = {
-		 "ethereal_bosses:nectar",  
-		
-		
-	},
-	
-	
+	follow = {"ethereal_bosses:nectar"},
+
 	on_rightclick = function(self, clicker)
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 50, 50, 90, false, nil) then return end
 
-		-- by right-clicking owner can switch between staying and walking
 		if self.owner and self.owner == clicker:get_player_name() then
 
 			if self.order ~= "stand" then
@@ -208,17 +169,10 @@ mobs:register_mob("ethereal_bosses:pixies_red", {
 
 end
 
-	
-	
-
 })
-
-
 
 mobs:register_egg("ethereal_bosses:pixies_red", "Pixies Red", "pixies_red_egg.png", 0)
 
--- ========================================================================================================================
--- ============================================= PIXIES GREEN =============================================================
 mobs:register_mob("ethereal_bosses:pixies_green", {
 	--nametag = "Pixies Green" ,
 	type = "npc",
@@ -256,14 +210,9 @@ mobs:register_mob("ethereal_bosses:pixies_green", {
 	floats = 0,
 	view_range = 35,
 	glow =8,
-	owner = "", --
+	owner = "", 
 	order = "follow",
-
-	drops = {
-	
-		--{name = " ", chance = 3, min = 0, max = 1},
-		
-	},
+	drops = {},
 
 	water_damage = 1,
 	lava_damage = 2,
@@ -278,24 +227,17 @@ mobs:register_mob("ethereal_bosses:pixies_green", {
 		walk_start = 1,
 		walk_end = 8,
 		run_start =1,
-		run_end = 8,
+		run_end = 8,	
+	},
+
+	follow = {"ethereal_bosses:nectar"},
 		
-	},
-
-
-	follow = {
-	
-		 "ethereal_bosses:nectar",  		
-	},
-	
-	
 	on_rightclick = function(self, clicker)
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 50, 50, 90, false, nil) then return end
 
-		-- by right-clicking owner can switch between staying and walking
 		if self.owner and self.owner == clicker:get_player_name() then
 
 			if self.order ~= "stand" then
@@ -315,21 +257,7 @@ mobs:register_mob("ethereal_bosses:pixies_green", {
 
 end
 
-	
-	
-
-
 })
 
-
-
-
-
-
-
-
-
 mobs:register_egg("ethereal_bosses:pixies_green", "Pixies Green", "pixies_green_egg.png", 0)
-
--- ==============================================================================================================
 

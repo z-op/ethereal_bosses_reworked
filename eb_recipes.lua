@@ -1,8 +1,9 @@
 -- CURA
+-- falta a alias 
 core.register_craft({
 	output = "ethereal_bosses:miraclehealing",
 	recipe = {
-		{"ethereal_bosses:nectar"},
+		{"default:apple"},
 		{"ethereal_bosses:deye"},
 		{"ethereal_bosses:queen_bottle"}
 	}
@@ -12,13 +13,10 @@ core.register_craft({
 core.register_craft({
 	output = "ethereal_bosses:queen_bottle 1",
 	recipe = {
-		{"group:glass"},
-		
+		{"group:glass"},	
 	}
 })
-
 -- TOOLS  : ===============================================================================
-
 core.register_craft({
     type = "shaped",
     output = "ethereal_bosses:pick_mushroom",
@@ -61,11 +59,7 @@ core.register_craft({
     }
 })
 
-
-
 --NATURE ITENS : ==========================================================================
--- CRAFT :
-
 core.register_craft({
     type = "shaped",
     output = "ethereal_bosses:naturewhip",
@@ -76,7 +70,6 @@ core.register_craft({
     }
 })
 
-
 core.register_craft({
     type = "shaped",
     output = "ethereal_bosses:naturerod",
@@ -86,21 +79,7 @@ core.register_craft({
         {"", "group:stick",""}
     }
 })
-
-
-
--- NOVOS ITENS : ==================================================================================
-core.register_craft({
-	output = "ethereal_bosses:nectar 1",
-	recipe = {
-		
-		{"group:flower", "group:flower", "group:flower"},
-		
-	}
-})
-
-
-
+-- NOVOS ITENS : ==========================================================================
 core.register_craft({
 	output = "ethereal_bosses:rotten_wood 1",
 	recipe = {

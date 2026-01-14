@@ -1,0 +1,36 @@
+0.28
+- Fixed armor textures made from Roots 
+
+0.30
+- Updating from "Minetest" to "core" (Luanti)
+- Added translations to Brazilian Portuguese and Spanish 
+
+0.50
+- O mod agora mode pode fucionar sem ou com outros mods
+- Agora o boss "Cogumelo louco" atira blocos de cogumelo
+- Mudança nas luvas de cogumelo (agora atira bloco de cogumelos)
+- Adicionado nova textura para "Espada Flamejante"
+- Agora é possivel encantar "Espada Flamenjante" no Mineclonia/Voxelibre
+- Agora é possivel encantar "Ferramentas de Cogumelol" no Mineclonia/Voxelibre
+- Armadura de "Raizes" agora pode ser criada e equipada no Mineclonia/Voxelibre
+- "Nature Guardian" agora tem mais chances de ser encontrado
+- "Nature Guardian" teve sua vida reduzida para 50
+- "Nature Guardian" agora dropa a roots coretamente
+- "Fungs" agora tem mais chances ser encontrado
+- "Depths Eye" agora tem mais chances ser encontrado
+- "Frosty Queen" agora tem dois ataques,invoca mosntros de gelo e atira blocos de gelo.
+- "Frosty Queen" agora dropa "Crystal Aurora"
+- "Miracle Healing" agora pode ser empilhada
+- Ajustados dano para Mineclonia/Voxelibre
+
+- Adicionado novos modelos para os bosses
+- Adicionado barra de boss (somente com Boss's Hudbar)
+- Adicionado "Aurora Crystal"
+- Adicionado "Aurora Armor"
+- Adicionado "Aurora Tools"
+
+- Removio "Pixies"
+- Removido "Nectar"
+- Removido Espada de obsidian
+- Removido Elder Npc
+
