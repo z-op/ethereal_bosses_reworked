@@ -6,31 +6,33 @@
 - Added translations to Brazilian Portuguese and Spanish 
 
 0.50
-- O mod agora mode pode fucionar sem ou com outros mods
-- Agora o boss "Cogumelo louco" atira blocos de cogumelo
-- Mudança nas luvas de cogumelo (agora atira bloco de cogumelos)
-- Adicionado nova textura para "Espada Flamejante"
-- Agora é possivel encantar "Espada Flamenjante" no Mineclonia/Voxelibre
-- Agora é possivel encantar "Ferramentas de Cogumelol" no Mineclonia/Voxelibre
-- Armadura de "Raizes" agora pode ser criada e equipada no Mineclonia/Voxelibre
-- "Nature Guardian" agora tem mais chances de ser encontrado
-- "Nature Guardian" teve sua vida reduzida para 50
-- "Nature Guardian" agora dropa a roots coretamente
-- "Fungs" agora tem mais chances ser encontrado
-- "Depths Eye" agora tem mais chances ser encontrado
-- "Frosty Queen" agora tem dois ataques,invoca mosntros de gelo e atira blocos de gelo.
-- "Frosty Queen" agora dropa "Crystal Aurora"
-- "Miracle Healing" agora pode ser empilhada
-- Ajustados dano para Mineclonia/Voxelibre
+- The mod now works with or without other mods
+- The "Crazy Mushroom" boss now shoots mushroom blocks
+- The mushroom gloves have been changed (now they shoot mushroom blocks), but can be equipped with "3D armor"
+- Added new texture for the "Flaming Sword"
+- It is now possible to enchant the "Flaming Sword" in Mineclonia/Voxelibre
+- It is now possible to enchant the "Mushroom Tools" in Mineclonia/Voxelibre
+- The "Roots" armor can now be crafted and equipped in Mineclonia/Voxelibre
+- The "Nature Guardian" now has a higher chance of being found
+- The "Nature Guardian" life has been reduced to 50
+- The "Nature Guardian" now drops roots correctly
+- "Fungi" now has a higher chance of being found
+- The "Eye of the Depths" now has a higher chance of being found
+- The "Frosty Queen" now has two attacks
+ - "Frosty Queen" now drop "Crystal Aurora"
+- "Miracle Healing" can now be stacked
+- Damage adjusted for Mineclonia/Voxelibre
+- Monster particles can be deactivated.
+- Improved custom attack,but it will continue to be improved. (Thanks TenPlus1 for the help)
 
-- Adicionado novos modelos para os bosses
-- Adicionado barra de boss (somente com Boss's Hudbar)
-- Adicionado "Aurora Crystal"
-- Adicionado "Aurora Armor"
-- Adicionado "Aurora Tools"
+- Added new boss models
+- Added boss bar (only with Boss's Hudbar)
+- Added "Aurora Crystal"
+- Added "Aurora Armor"
+- Added "Aurora Tools"
 
-- Removio "Pixies"
-- Removido "Nectar"
-- Removido Espada de obsidian
-- Removido Elder Npc
+- Removed "Pixies"
+- Removed "Nectar"
+- Removed Obsidian Sword
+- Removed Elder NPC
 

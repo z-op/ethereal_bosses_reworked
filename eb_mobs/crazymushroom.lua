@@ -45,6 +45,7 @@ mobs:register_mob("ethereal_bosses:crazymushroom", {
 	jump_height = 5,
 	stepheight = 3.0,
 	floats = 0,
+	knock_back = false,
 	view_range = 35,
 	drops = {
 		{name = "ethereal_bosses:glove_glove", chance = 1, min = 1, max = 1},

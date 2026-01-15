@@ -5,8 +5,7 @@
 
 local S = core.get_translator("ethereal_bosses")
 
-local last_part = 0
-local last_attack = 0
+ethereal_bosses.frosty_queen_particles = core.settings:get_bool("frosty_queen_particles", true)
 
 local function frosty_queem_part (pos)
 core.add_particlespawner({
@@ -101,37 +100,38 @@ mobs:register_mob("ethereal_bosses:frostyqueen", {
 	end,
 	
 	do_custom = function(self, dtime)
-
-    	         local current_time = core.get_us_time()
-    	         
-		 if current_time - last_part >= 2 * (10^6)  then 
-		 last_part = current_time
-		
-		 local pos = self.object:get_pos()
-		   frosty_queem_part (pos)
-		end   
+	 if not ethereal_bosses.frosty_queen_particles then return end
+           local fq_pos = self.object:get_pos()
+           local current_time = core.get_us_time()
+           
+	   self.last_part_q = self.last_part_q or 0
+	   	
+           if current_time - self.last_part_q >= 2 * (10^6) then
+	      self.last_part_q = current_time
+	         frosty_queem_part (fq_pos)
+	   end	    
 	end,
+
+	custom_attack = function(self, to_attack) -- Custom attacks by: TenPlus1 and Duckgo (In progress)
+
+	 self.attack_count = (self.attack_count or 0) + 1
+	  if self.attack_count < 5 then return end
+	    self.attack_count = 0
 	
-        custom_attack = function(self, to_attack)	
-	 local current_time = core.get_us_time()
+	 self:set_animation("punch",false)
+	 --core.log("punch ok")
+
+	 local pos = self.object:get_pos()
+	 core.sound_play("attack_range_queen", {pos = pos, gain = 0.5})
 	 
-	  if current_time - last_attack >= 15 * (10^6)  then 
-		last_attack = current_time 
-		
-                self:set_animation("punch")
-                
-		local pos = self.object:get_pos()
-		core.sound_play("attack_range_queen", {pos = pos, gain = 0.5})
-		
-                core.add_entity({x=pos.x +3,y=pos.y,z=pos.z}, "ethereal_bosses:icemonster")
-                core.add_entity({x=pos.x -3,y=pos.y,z=pos.z}, "ethereal_bosses:icemonster")
-                core.add_entity({x=pos.x,y=pos.y,z=pos.z-3}, "ethereal_bosses:icemonster")
-                core.add_entity({x=pos.x,y=pos.y,z=pos.z+3}, "ethereal_bosses:icemonster")
-                
-	     
-	     end	
+	 core.add_entity({x=pos.x +3,y=pos.y+3,z=pos.z}, "ethereal_bosses:icemonster")
+         core.add_entity({x=pos.x -3,y=pos.y+3,z=pos.z}, "ethereal_bosses:icemonster")
+         core.add_entity({x=pos.x,y=pos.y+3,z=pos.z-3}, "ethereal_bosses:icemonster")
+         core.add_entity({x=pos.x,y=pos.y+3,z=pos.z+3}, "ethereal_bosses:icemonster")
+	    
 	end,					
 })
+
 
 -- ARROW -----------------------------------------------------------
 mobs:register_arrow("ethereal_bosses:snowflake", {

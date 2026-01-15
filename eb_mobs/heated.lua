@@ -2,7 +2,31 @@
 -- https://freesound.org/people/NicknameLarry/sounds/489901/ (CC0)
 
 local S = core.get_translator("ethereal_bosses")
-local last_attack = 0
+
+ethereal_bosses.heated_particles = core.settings:get_bool("heated_particles", true)
+
+local function heated_part (pos)
+core.add_particlespawner({
+amount = 10, 
+time = 1, 		    
+minpos = {x = pos.x + 1.7 , y = pos.y+1, z = pos.z + 1.7},
+maxpos = {x = pos.x - 1.7, y = pos.y + 4, z = pos.z - 1.7},		    
+minvel = {x = 0, y = 1, z = 0}, 
+maxvel = {x = 0, y = 4, z = 0},  
+minacc = {x = -2, y = -1, z = -2},
+maxacc = {x = 2, y = 4, z = 2}, 		    
+minexptime = 1, 
+maxexptime = 1,		     
+minsize = 5,
+maxsize = 10,		    
+collisiondetection = false,
+vertical = true, 
+texture = "eb_smoke.png", 
+glow = 4, 
+})
+end
+
+
 mobs:register_mob("ethereal_bosses:heated", {
 	--nametag = "Heated Boss",
 	type = "monster",
@@ -40,6 +64,7 @@ mobs:register_mob("ethereal_bosses:heated", {
 	jump_height = 2,
 	stepheight = 3.0,
 	floats = 0,
+	knock_back = false,
 	view_range = 35,
 	drops = {
 		{name = "ethereal_bosses:flaming_sword", chance = 1, min = 1, max = 1},
@@ -74,25 +99,30 @@ mobs:register_mob("ethereal_bosses:heated", {
          end
 	end,
 	
-	
-	custom_attack = function(self, to_attack)	
-	 local current_time = core.get_us_time()
-	 local pos_ht = self.object:get_pos()
-	  if current_time - last_attack >= 3 * (10^6)  then 
-		last_attack = current_time 
-	            
-	            self:set_animation("punch")
-	            core.log("punch ok")
+	do_custom = function(self, dtime)
+	   if not ethereal_bosses.heated_particles then return end
+           local ht_pos = self.object:get_pos()
+           local current_time = core.get_us_time()
+           
+	   self.last_part_ht = self.last_part_ht or 0
+	   	
+           if current_time - self.last_part_ht >= 2 * (10^6) then
+	      self.last_part_ht = current_time
+	         heated_part (ht_pos)
+	   end	    
+	end,
 
-		    core.after(0.5,function()
-		     self.attack:punch(self.object, 1.0, {
-			full_punch_interval = 1.0,
-			damage_groups = {fleshy = self.damage}
-		     }, nil)	
-		   end)	     
-	     end	
-        end,			
+	custom_attack = function(self, to_attack)
+  
+	self.attack_count = (self.attack_count or 0) + 1
+	if self.attack_count < 3 then return end
+	self.attack_count = 0
+
+	self:set_animation("punch", true)
+
+	return true -- PARA CONTINUAR.
+	end,					
 })
-
+	  
 mobs:register_egg("ethereal_bosses:heated", S("Heated"), "eggsheated.png", 0)
 

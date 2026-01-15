@@ -1,5 +1,7 @@
 local path = core.get_modpath("ethereal_bosses")
 
+ethereal_bosses = {}
+
 -- MONSTERS ; =========================================
 if core.get_modpath("boss_s_hudbar") then 
 dofile(path .. "/eb_bar.lua")

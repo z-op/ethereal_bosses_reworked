@@ -1,5 +1,26 @@
 local S = core.get_translator("ethereal_bosses")
 
+local function icemosnter_part (pos) 
+core.add_particlespawner({
+    amount = 10,
+    time = 1.5,
+    minpos = {x=pos.x + 3, y=pos.y + -1, z=pos.z + 3},
+    maxpos = {x=pos.x - 2, y=pos.y + 2, z=pos.z - 2},
+    minvel = {x=0, y=-0.2, z=0},
+    maxvel = {x=0, y=-0.2, z=0},
+    minacc = {x=0, y=0, z=0},
+    maxacc = {x=0, y=0, z=0},
+    minexptime = 1.0,
+    maxexptime = 1.5,
+    minsize = 8,
+    maxsize = 5,
+    collisiondetection = true,
+    vertical = false,
+    texture = "fqp.png",   
+    glow = 8,
+})   
+end
+
 mobs:register_mob("ethereal_bosses:icemonster", {
 	type = "monster",
 	passive = false,
@@ -54,10 +75,8 @@ mobs:register_mob("ethereal_bosses:icemonster", {
 	   --core.log(tostring( self.damage))
          end
          
-        -- core.after(10,function ()
-         --  self.object:remove()
-         --end)
-         
+         local pos = self.object:get_pos()
+               icemosnter_part (pos)       
 	end,
 })
 

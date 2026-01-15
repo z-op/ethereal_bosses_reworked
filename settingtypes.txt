@@ -1,0 +1,6 @@
+# Disable Heated Particles
+heated_particles (Disable Heated Particles) bool true
+
+# Disable Frosty Queen Particles
+frosty_queen_particles (Disable Frosty Queen Particles) bool true
+

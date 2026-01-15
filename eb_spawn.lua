@@ -17,17 +17,18 @@ mobs:spawn({
 	chance = 8000,
 	min_height = -200,
 	max_height = 200,
-	active_object_count = 1,
+	--active_object_count = 1,
 })
 
 mobs:spawn({
 	name = "ethereal_bosses:heated",
 	nodes = {"default:lava_source","nether:rack"},
-	max_light = 7,
+	min_light = 8,
+	max_light = 14,
 	chance = 8000,
-	min_height = -200,
+	min_height = -2000,
 	max_height = 200,
-	active_object_count = 1,
+	--active_object_count = 1,
 })
 
 mobs:spawn({
@@ -37,7 +38,7 @@ mobs:spawn({
 	chance = 8000,
 	min_height = -200,
 	max_height = 200,
-	active_object_count = 1,
+	--active_object_count = 1,
 })
 
 mobs:spawn({
