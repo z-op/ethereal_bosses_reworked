@@ -1,3 +1,42 @@
+--- PIXOES
+mobs:spawn({
+	name = "ethereal_bosses:pixies_red",
+	nodes = "air",
+	neighbors = {"group:flower"},
+	max_light = 7,
+	chance = 4000,
+	interval = 60,
+	min_height = 0,
+	max_height = 40,
+	active_object_count = 4,
+})
+
+
+mobs:spawn({
+	name = "ethereal_bosses:pixies_green",
+	nodes = "air",
+	neighbors = {"group:flower"},
+	max_light = 7,
+	chance = 4000,
+	interval = 60,
+	min_height = 0,
+	max_height = 40,
+	active_object_count = 4,
+})
+
+
+mobs:spawn({
+	name = "ethereal_bosses:pixies_blue",
+	nodes = "air",
+	neighbors = {"group:flower"},
+	max_light = 7,
+	interval = 60,
+	chance = 4000,
+	min_height = 0,
+	max_height = 40,
+	active_object_count = 4,
+})
+
 --[[
 mobs:spawn({
 	name = "ethereal_bosses:elder",
